@@ -19,25 +19,27 @@
   <meta name="author" content="牧丛">
   <meta name="keywords" content="">
   
-    <meta name="description" content="如果你是第一次点进这篇博客，为什么不花2分钟的时间来看一下这篇简介呢？">
+    <meta name="description" content="虽然停更了很长时间，但现在又重新捡起来了，来看看概率与信息论">
 <meta property="og:type" content="article">
-<meta property="og:title" content="写在最前面">
-<meta property="og:url" content="https://zhuen-wei.github.io/2025/07/02/%E5%86%99%E5%9C%A8%E6%9C%80%E5%89%8D%E9%9D%A2/index.html">
+<meta property="og:title" content="深度学习笔记3">
+<meta property="og:url" content="https://zhuen-wei.github.io/2026/03/02/%E3%80%8A%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E3%80%8B%E7%AC%94%E8%AE%B03/index.html">
 <meta property="og:site_name" content="MYCDherder&#39;s Blog">
-<meta property="og:description" content="如果你是第一次点进这篇博客，为什么不花2分钟的时间来看一下这篇简介呢？">
+<meta property="og:description" content="虽然停更了很长时间，但现在又重新捡起来了，来看看概率与信息论">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zhuen-wei.github.io/cover/cover1.jpg">
-<meta property="article:published_time" content="2025-07-02T08:00:00.000Z">
-<meta property="article:modified_time" content="2025-07-02T09:12:31.698Z">
+<meta property="og:image" content="https://zhuen-wei.github.io/cover/cover9.jpg">
+<meta property="article:published_time" content="2026-03-02T09:00:00.000Z">
+<meta property="article:modified_time" content="2026-03-02T10:18:04.580Z">
 <meta property="article:author" content="MYCDherder">
+<meta property="article:tag" content="卷积神经网络">
+<meta property="article:tag" content="深度学习模型">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zhuen-wei.github.io/cover/cover1.jpg">
+<meta name="twitter:image" content="https://zhuen-wei.github.io/cover/cover9.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>写在最前面 - MYCDherder&#39;s Blog</title>
+  <title>深度学习笔记3 - MYCDherder&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,7 +205,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="写在最前面"></span>
+            <span id="subtitle" data-typed-text="深度学习笔记3"></span>
           
         </div>
 
@@ -219,8 +221,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-02 16:00" pubdate>
-          2025年7月2日 下午
+        <time datetime="2026-03-02 17:00" pubdate>
+          2026年3月2日 下午
         </time>
       </span>
     
@@ -231,7 +233,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k 字
+          351 字
         
       </span>
     
@@ -242,7 +244,7 @@
         
         
         
-          11 分钟
+          3 分钟
         
       </span>
     
@@ -279,24 +281,28 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">写在最前面</h1>
+            <h1 id="seo-header">深度学习笔记3</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="欢迎你来到牧丛的博客">欢迎你来到牧丛的博客！</h1>
-<p>在正式浏览这个博客的主要内容之前，我希望你能够抽出几分钟的时间来阅读一下这篇文章，或许能够节约你的一部分时间。</p>
-<p>其实笔者在2025年2月份期间，就开始着手搭建自己的博客，当时使用的是matery主题，当时也更新了一些文章，但是一直存在一些格式上不适配的现象，后来在朋友的推荐下选择了fluid的主题。但是交大大一下的课程堪称恐怖，笔者拼劲全力，实在没有办法在保证课内学习质量的情况下持续更新博客，无奈只能停更。现在已是暑假，笔者决定重整旗鼓，重新开始博客的更新。下面是我2025年年初写的前言（略有修改）：</p>
-<p>首先，我想先简单介绍一下有关我博客名字的一些事情。在网址和Github那里，你可以看到我注册的名称是“MYCDherder”，而进入博客后的自我介绍中，会告诉你我的昵称叫“牧丛”，这是我个人习惯所导致的。我是个不怎么会起名字的人，我几乎所有的账户，倘若可以用中文表示，那就一律起名为“牧丛”，而若是需要英文，我一般就会使用“MYCD”。但是由于“MYCD”的名字过短，不能通过Github的名称审核，我只好将两个名字融合起来，“牧丛”没有直接对应的英文单词，我就取了其中的“牧”字，将其翻译为“herder”，“放牧的人”，两者一结合，问题就迎刃而解了。</p>
-<p>再说说笔者，笔者目前是一名上海交通大学的本科生，就读于信息工程专业。在初高中的学习生活中，笔者一直算不上一个出色的学生，也常常被周围巨佬们的天才表现所震撼。在大学的生活中，笔者也往往比较迟钝，很多消息往往知道得比别人慢，产生了一定的信息差。像个人博客这种东西，也是几个月前，笔者发现一个高中同学已经创建了属于自己的博客时才了解到的。</p>
-<p>当然，笔者创立这个博客，并不是为了盲目地跟风。笔者初入大学，对于大学的学习生活，依然没有能够找到一条稳定而高效的路径。显而易见，初高中以熟练度为主的应试方法必然不会符合大学的教育模式，单纯的高分也不是中国本科教育的目的。笔者建立这个博客，其实也是对自己本科学习方法的一种探索。当然，不同于毫无意义的胡乱尝试，创建并运营博客有着一些明显的好处：</p>
-<p>第一，博客的运营需要持续的更新，持续的更新就需要持续的学习与思考，对于自己博客的运营其实也是一种自我的督促。</p>
-<p>第二，更新博客的过程其实也是“费曼学习法”，博客更新的内容是公开的，实质上就是将笔者所学的知识用自己的语言，以通俗易懂的方式教授给别人。在这个过程中，笔者对于知识的理解也会更加透彻。</p>
-<p>当然，创立的博客的好处当然不止这些，但限于篇幅原因，笔者不再继续探讨。其实，笔者更多是想把这个博客做成一个类似于学习笔记的东西，当然，这并不意味着笔者会呆板地去照抄教材。笔者希望的，是能够在这些基础学科中找到一些大家忽略的细节，进行一些深度的思考。</p>
-<p>除了单纯的巩固细节之外，笔者还希望能够对于一些现有的模型进行自己的思考和阐释。当然，这些思考不一定是笔者率先提出来的，笔者所表述出来的语言也不一定精准，肯定会出现许多的瑕疵，但是笔者认为这个过程对于一个求学者来说是必要的。</p>
-<p>在这个过程中，笔者可能会有一些想到一半就无法继续下去的想法，到时候可能会单独开一个列表，欢迎大家和笔者一起思考和讨论。</p>
-<p>最后，笔者第一次创建并且尝试运营博客，可能会出现很多的错误和疏漏，如果读者愿意反馈给我，笔者将不胜感激。</p>
-<p>最后的最后，非常感谢大家能够读完这篇文章，愿我们一起学习，一起进步！</p>
+                <h1 id="概率与信息论">概率与信息论</h1>
+<h2 id="为什么使用概率">为什么使用概率？</h2>
+<p>传统计算机科学的许多分支处理的实体大部分都是完全确定且必然的。但是机器学习通常必须处理不确定量，有时也可能需要处理随机（非确定性的）量。</p>
+<p>不确定性有三种可能的来源：</p>
+<ol type="1">
+<li>被建模系统内在的随机性</li>
+<li>不完全观测</li>
+<li>不完全建模</li>
+</ol>
+<p>这三个完全都是表面意思。我们接下来用自己的话来表示一下频率概率和贝叶斯概率的区别：</p>
+<p>如果我们说一个结果发生概率为<span
+class="math inline"><em>p</em></span>，这意味着如果我们反复实验（例如抛硬币）无限次，有<span
+class="math inline"><em>p</em></span>的比例可能导致这样的结果。但是这里面会存在一个问题，就是不适用于那些不可重复的命题。比如说，一个医生对于诊断了病人患病概率为<span
+class="math inline">40</span>，我们不可能让病人拥有无穷多的副本。在这个这种例子中，我们用概率来表示一种<strong>信任度</strong>，其中<span
+class="math inline">1</span>表示非常肯定病人患病，而<span
+class="math inline">0</span>表示非常肯定病人没有患病。</p>
+<p>前面那种概率直接与事件发生的频率相联系就是<strong>频率派概率</strong>，后面涉及确定性水平，被称为<strong>贝叶斯概率</strong></p>
 
                 
               </div>
@@ -305,6 +311,36 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="category-chain-item">深度学习</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" class="print-no-link">#卷积神经网络</a>
+      
+        <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B/" class="print-no-link">#深度学习模型</a>
+      
+    </div>
   
 </div>
 
@@ -314,8 +350,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>写在最前面</div>
-      <div>https://zhuen-wei.github.io/2025/07/02/写在最前面/</div>
+      <div>深度学习笔记3</div>
+      <div>https://zhuen-wei.github.io/2026/03/02/《深度学习》笔记3/</div>
     </div>
     <div class="license-meta">
       
@@ -327,7 +363,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年7月2日</div>
+          <div>2026年3月2日</div>
         </div>
       
       
@@ -359,15 +395,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/07/02/%E6%9C%80%E5%A4%A7%E8%BF%9E%E7%BB%AD%E5%AD%90%E5%BA%8F%E5%88%97%E6%B1%82%E5%92%8C/" title="最大连续子序列求和">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">最大连续子序列求和</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2026/01/19/Claude%20code%20API%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/" title="Claude code for VScode配置记录">
+                        <span class="hidden-mobile">Claude code for VScode配置记录</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
@@ -421,6 +457,12 @@
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -639,6 +681,49 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 

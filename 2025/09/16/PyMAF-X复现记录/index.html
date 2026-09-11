@@ -22,20 +22,20 @@
     <meta name="description" content="笔者从搭建环境开始复现了PyMAF-X模型">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PyMAF-X模型完整复现记录">
-<meta property="og:url" content="http://example.com/2025/09/16/PyMAF-X%E5%A4%8D%E7%8E%B0%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:url" content="https://zhuen-wei.github.io/2025/09/16/PyMAF-X%E5%A4%8D%E7%8E%B0%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="MYCDherder&#39;s Blog">
 <meta property="og:description" content="笔者从搭建环境开始复现了PyMAF-X模型">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/cover/cover6.jpg">
+<meta property="og:image" content="https://zhuen-wei.github.io/cover/cover6.jpg">
 <meta property="article:published_time" content="2025-09-16T14:07:17.673Z">
 <meta property="article:modified_time" content="2026-01-19T01:56:53.870Z">
 <meta property="article:author" content="MYCDherder">
-<meta property="article:tag" content="流程记录">
 <meta property="article:tag" content="SMPL">
 <meta property="article:tag" content="PyMAF-X">
 <meta property="article:tag" content="三维人体模型重建">
+<meta property="article:tag" content="流程记录">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/cover/cover6.jpg">
+<meta name="twitter:image" content="https://zhuen-wei.github.io/cover/cover6.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -79,7 +79,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":true,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"zhuen-wei.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":true,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -418,13 +418,13 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%B5%81%E7%A8%8B%E8%AE%B0%E5%BD%95/" class="print-no-link">#流程记录</a>
-      
         <a href="/tags/SMPL/" class="print-no-link">#SMPL</a>
       
         <a href="/tags/PyMAF-X/" class="print-no-link">#PyMAF-X</a>
       
         <a href="/tags/%E4%B8%89%E7%BB%B4%E4%BA%BA%E4%BD%93%E6%A8%A1%E5%9E%8B%E9%87%8D%E5%BB%BA/" class="print-no-link">#三维人体模型重建</a>
+      
+        <a href="/tags/%E6%B5%81%E7%A8%8B%E8%AE%B0%E5%BD%95/" class="print-no-link">#流程记录</a>
       
     </div>
   
@@ -437,7 +437,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>PyMAF-X模型完整复现记录</div>
-      <div>http://example.com/2025/09/16/PyMAF-X复现记录/</div>
+      <div>https://zhuen-wei.github.io/2025/09/16/PyMAF-X复现记录/</div>
     </div>
     <div class="license-meta">
       
