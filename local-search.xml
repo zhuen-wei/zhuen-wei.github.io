@@ -47,9 +47,9 @@
     
     <tags>
       
-      <tag>流程记录</tag>
-      
       <tag>Claude codes</tag>
+      
+      <tag>流程记录</tag>
       
     </tags>
     
@@ -74,13 +74,13 @@
     
     <tags>
       
+      <tag>流程记录</tag>
+      
       <tag>SMPL</tag>
       
       <tag>PyMAF-X</tag>
       
       <tag>三维人体模型重建</tag>
-      
-      <tag>流程记录</tag>
       
     </tags>
     
@@ -246,11 +246,11 @@
       
       <tag>算法</tag>
       
-      <tag>最优时间复杂度</tag>
-      
       <tag>快速幂</tag>
       
       <tag>矩阵</tag>
+      
+      <tag>最优时间复杂度</tag>
       
     </tags>
     
