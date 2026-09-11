@@ -31,33 +31,6 @@
   
   
   <entry>
-    <title>Claude code for VScode配置记录</title>
-    <link href="/2026/01/19/Claude%20code%20API%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/"/>
-    <url>/2026/01/19/Claude%20code%20API%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/</url>
-    
-    <content type="html"><![CDATA[<p>本文的主要内容都是参考<ahref="https://platform.xiaomimimo.com/#/docs/integration/claude-code">XiaomiMiMo 开放平台</a>会在其中加入一些自己的理解，仅供参考。</p><p>Claudecode采取的是MiMo-V2-Flash模型，它具备良好的代码理解与编程能力，兼容Anthropic 接口协议，适用于代码助手、Agent 工具等多种场景。</p><h2 id="获取-api-key">获取 API Key</h2><p>访问 <ahref="https://platform.xiaomimimo.com/#/console/api-keys">控制台-APIKeys</a>，点击“新建 API key”按钮，输入名称以创建新的 API Key。</p><h2 id="在-claude-code-cli-中使用">在 Claude Code CLI 中使用</h2><h3 id="配置环境">配置环境</h3><p>Linux和Macos系统的默认环境就是没有问题的</p><p>Windows系统主要是两条路径，一条是安装WSL，可以参考 <ahref="https://learn.microsoft.com/en-us/windows/wsl/install">Windows系统安装 WSL</a>，还有一条路径是安装 Git for Windows，安装方法参考 <ahref="https://git-scm.com/install/windows">Windows 系统安装 Git forWindows</a> ，然后在WSL或者Git Bash中执行一下操作。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g @anthropic-ai/claude-code<br></code></pre></td></tr></table></figure><p>注意，如果你之前没有安装过npm，需要先安装，WSL的话是直接在终端下载，GitBash是在node官网下载，都很简单</p><h3 id="配置-mimo-api-key">配置 MiMo API Key</h3><ol type="1"><li><p>在<code>~/.claude.json</code> 中，加入设置<code>"hasCompletedOnboarding": true</code>，以跳过登录步骤。</p></li><li><p>编辑或创建 Claude Code 的配置文件，路径为<code>~/.claude/settings.json</code>，在该文件中添加或更新<code>env</code> 字段，需要将 <code>$MIMO_API_KEY</code> 替换为从 <ahref="https://platform.xiaomimimo.com/#/console/api-keys">控制台-APIKeys</a> 获取的 API Key。</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;env&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;ANTHROPIC_BASE_URL&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;https://api.xiaomimimo.com/anthropic&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;ANTHROPIC_AUTH_TOKEN&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;$MIMO_API_KEY&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;ANTHROPIC_DEFAULT_OPUS_MODEL&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;mimo-v2-flash&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;ANTHROPIC_DEFAULT_SONNET_MODEL&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;mimo-v2-flash&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;ANTHROPIC_DEFAULT_HAIKU_MODEL&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;mimo-v2-flash&quot;</span><br>  <span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure></li></ol><p>$MIMO-API-KEY就是上面你生成的API Keys</p><h3 id="在wsl或者git-bash中使用">在WSL或者Git Bash中使用</h3><p>上述配置完成后，WSL或者GitBash中输入<code>Claude</code>，即可进入模式：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">claude<br></code></pre></td></tr></table></figure><p>如果成功应该会显示以下图片：</p><p><imgsrc="../../themes/fluid/source/picture/Claude%20code1.jpg" /></p><p>ENTER之后显示：</p><p><imgsrc="../../themes/fluid/source/picture/Claude%20code2.jpg" /></p><p>这个时候就基本成功了</p><h2 id="在-claude-code-for-vs-code-插件中使用">在 Claude Code for VSCode 插件中使用</h2><p>直接在VScode中搜索“Claude Code for VSCode”插件，下载完成之后在VScode左上角会出现橙色标志：</p><p><imgsrc="../../themes/fluid/source/picture/Claude%20code3.jpg" /></p><p>点击这个橙色标志，就会出现下图情况：</p><p><imgsrc="../../themes/fluid/source/picture/CLaude%20code4.jpg" /></p><p>这个时候你问它一些问题，它就可以正常回答了。</p><p>注意，如果你是Windows系统，而且VS code是在Windows里面的，必须通过Gitfor windows的安装方法，才能完成。WSL的方法是不行的。</p><p>最后提醒大家，笔者这里使用的小米keyAPI的免费截止时间是在2025年1月20日，对，笔者写完这篇Blog的时候它只剩下不到2天的免费时间了，已经没有太强的实际意义了。笔者就是一个纯joker，不过，这个过程还是希望能够给到读者一些启发（大概率也不会有），也算是笔者自己的一个记录，谢谢！</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>AI工具</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Claude codes</tag>
-      
-      <tag>流程记录</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>PyMAF-X模型完整复现记录</title>
     <link href="/2025/09/16/PyMAF-X%E5%A4%8D%E7%8E%B0%E8%AE%B0%E5%BD%95/"/>
     <url>/2025/09/16/PyMAF-X%E5%A4%8D%E7%8E%B0%E8%AE%B0%E5%BD%95/</url>
@@ -74,13 +47,13 @@
     
     <tags>
       
-      <tag>流程记录</tag>
-      
       <tag>SMPL</tag>
       
       <tag>PyMAF-X</tag>
       
       <tag>三维人体模型重建</tag>
+      
+      <tag>流程记录</tag>
       
     </tags>
     
